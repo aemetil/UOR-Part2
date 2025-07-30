@@ -1,0 +1,232 @@
+/* Reset et styles de base */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Mise en page principale */
+.conteneur {
+    width: 70%;
+    margin: auto;
+    overflow: hidden; /* évite que les float dépassent */
+}
+
+/* Styles des titres */
+h1, h2, h3 {
+    margin-bottom: 1rem; /* Plus d'espacement après les titres */
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+span {
+    background: linear-gradient(90deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF);
+    font-weight: bold;
+
+}
+
+/* Séparateurs */
+.separateur-primaire {
+    border: 0.5px solid #9A1032;
+    margin: 1.5rem 0; /* Plus d'espacement vertical */
+}
+
+.separateur-secondaire {
+    border: 0.5px dashed black;
+    margin: 1rem 0; /* Plus d'espacement vertical */
+}
+
+/* Barre de navigation horizontale */
+.barre-nav {
+    background: lightgray;
+    padding: 20px 0;
+    min-height: 50px;
+    border-bottom: #cf4725 solid 2px;
+    border-radius: 6px;
+    /* position: sticky; /* Barre de navigation fixe*/ */
+    top: 0;
+    z-index: 1000;
+}
+
+.barre-nav nav {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.barre-nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.barre-nav li {
+    display: inline;
+    padding: 0 15px;
+    float: left;
+}
+
+.barre-nav a {
+    color: #9A1032;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Transition douce */
+}
+
+.barre-nav a:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Logo à gauche et menu à droite (float + clear) */
+.logo {
+    float: left;
+}
+
+.logo img {
+    margin: 0 0 20px 20px;
+    width: 130px;
+}
+
+/* Articles avec fond blanc et ombre légère */
+article {
+    margin-bottom: 2rem; /* Espacement entre les articles */
+    padding: 1rem;
+    background-color: white; /* Fond blanc pour les articles */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère */
+}
+
+/* Articles avec fond blanc et ombre légère */
+.conteneur-figure {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid black;
+    float: right;
+    margin: 20px;
+    padding: 3px;
+    max-width: 200px;
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.conteneur-figure:hover {
+    transform: scale(1.02); /* Léger zoom au survol */
+}
+
+.image-contenu {
+    border: 1px solid black;
+    float: right;
+    max-width: 200px;
+    max-height: 2000px;
+}
+
+.legende-figure {
+    font-size: small;
+    background-color: lightgray;
+    padding: 1px;
+    text-align: left;
+}
+
+/* Tableau */
+.tableau-personnalise {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.tableau-personnalise th,
+.tableau-personnalise td {
+    border: 1px solid;
+    text-align: center;
+}
+
+.tableau-personnalise .texte-gauche {
+    text-align: left;
+}
+
+/* Liens externes */
+.liens-externes {
+    padding-bottom: 50px;
+}
+
+.liens-externes hr {
+    width: 30%;
+    margin-top: 100px;
+    border: 0.3px dashed black;
+}
+
+.liens-externes li {
+    font-size: x-small;
+}
+
+/* Pied de page : nettoyage des float */
+.pied-page {
+    clear: both;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6;
+    border-radius: 6px;
+}
+
+/* Média */
+.conteneur-video {
+    width: 100%;
+    height: auto;
+}
+
+/* Bouton retour en haut */
+.retour-haut {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #9A1032;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Caché par défaut */
+    transition: opacity 0.3s ease;
+}
+
+.retour-haut:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries pour le responsive */
+@media screen and (max-width: 768px) {
+    .conteneur {
+        width: 90%;
+        padding: 0 15px;
+    }
+
+    .conteneur-figure {
+        float: none;
+        margin: 20px auto;
+    }
+
+    .barre-nav li {
+        padding: 0 10px;
+    }
+
+    .tableau-personnalise {
+        overflow-x: auto;
+        display: block;
+    }
+}
+  
