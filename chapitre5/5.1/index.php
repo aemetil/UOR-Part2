@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Coupe du monde de football 2022</title>
 
-    <!-- Métadonnées au format LD-JSON  -->
+    <!-- métadonnées au format LD-JSON  -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -216,7 +216,7 @@
                 </video>
             </article>
 
-            <!--Article-->
+            <!--article-->
             <article>
                 <h2>Acteurs de la Coupe du monde</h2>
                 <hr class="h2-hr">

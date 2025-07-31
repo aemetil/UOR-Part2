@@ -1,7 +1,7 @@
 /* reset et styles de base */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.5;
     padding: 0;
     margin: 0;
@@ -21,11 +21,11 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 32px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 400;
 }
 
@@ -57,7 +57,7 @@ span {
     min-height: 50px;
     border-bottom: #cf4725 solid 2px;
     border-radius: 6px;
-    /* position: sticky; /* barre de navigation fixe*/ */
+    /* position: sticky; */
     top: 0;
     z-index: 1000;
 }
@@ -111,7 +111,7 @@ article {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ombre légère */
 }
 
-/* articles avec fond blanc et ombre légère */
+/* figure avec fond blanc et ombre légère */
 .conteneur-figure {
     display: flex;
     flex-flow: column;
@@ -145,6 +145,7 @@ article {
 .tableau-personnalise {
     border-collapse: collapse;
     margin: auto;
+    width: 100%;
 }
 
 .tableau-personnalise th,
@@ -172,7 +173,7 @@ article {
     font-size: x-small;
 }
 
-/* pied de page : nettoyage des float */
+/* pied de page, nettoyage des float */
 .pied-page {
     clear: both;
     padding: 10px;
@@ -186,7 +187,8 @@ article {
 
 /* média */
 .conteneur-video {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100%;
     height: auto;
 }
 
@@ -208,7 +210,7 @@ article {
     opacity: 0.8;
 }
 
-/* media Queries pour le responsive */
+/* media queries pour le responsive */
 @media screen and (max-width: 768px) {
     .conteneur {
         width: 90%;
@@ -226,7 +228,7 @@ article {
 
     .tableau-personnalise {
         overflow-x: auto;
-        display: block;
+        /* display: block; */
     }
 }
   
