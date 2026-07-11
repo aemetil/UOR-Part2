@@ -24,11 +24,8 @@ st.set_page_config(
     layout="centered"
 )
 
+# classe principale du chatbot qui gère les réponses aux différentes questions
 class MiniChatbot:
-    """
-    Classe principale du chatbot qui gère les réponses aux différentes questions
-    """
-    
     def __init__(self):
         #dictionnaire des salutations
         self.salutations = {
