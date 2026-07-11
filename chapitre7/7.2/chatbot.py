@@ -3,9 +3,9 @@
 # Rôle ........ : Mini-chatbot interactif capable de dialoguer avec un utilisateur
 #                  et de répondre aux salutations et questions simples du quotidien
 # Auteur ...... : Alberto, EMETIL
-# Version ..... : V1.0 du 20/07/2025
+# Version ..... : V1.0 du 20/07/2024
 # Licence ..... : Réalisé dans le cadre de l'exercice 7.2 "Mini-Projet Chatbot"
-#                 du cours de l'"Informatique fondamentale"
+#                 du cours de l'"IF"
 # Langage ..... : Python 3.11
 # Framework ... : Streamlit pour l'interface web
 # Exécution ... : streamlit run chatbot.py
@@ -56,7 +56,7 @@ class MiniChatbot:
                 "Mon nom est ChatBot, votre assistant virtuel!"
             ],
             'age': [
-                "Je suis né il y a quelques lignes de code! 😊",
+                "Je suis né il y a quelques lignes de code!",
                 "Je n'ai pas d'âge, je suis un petit programme informatique!"
             ],
             'heure': [
@@ -128,7 +128,7 @@ def main():
     """
     
     # titre
-    st.title("🤖 Mini-Chatbot")
+    st.title("Mini-Chatbot")
     st.markdown("### Bienvenue! Dites-moi bonjour pour commencer!")
     
     # initialiser le chatbot
@@ -140,7 +140,7 @@ def main():
         st.session_state.historique = []
     
    # affichage des exemples de questions
-    with st.expander("💡 Exemples de questions que vous pouvez poser"):
+    with st.expander("Exemples de questions que vous pouvez poser"):
         st.markdown("""
         **Salutations :**
         - Bonjour
@@ -174,11 +174,11 @@ def main():
                 'time': datetime.now().strftime('%H:%M:%S')
         })
         else:
-            st.warning("⚠️Vous devez écrire quelque chose avant d'envoyer.")
+            st.warning("Vous devez écrire quelque chose avant d'envoyer.")
     
     # afficher l'historique
     if st.session_state.historique:
-        st.markdown("#### 💬 Conversation")
+        st.markdown("####Conversation")
         
         for chat in reversed(st.session_state.historique):
             # message utilisateur
@@ -186,19 +186,19 @@ def main():
             # réponse bot
             # un petit delai de la bot
             #time.sleep(1)
-            st.markdown(f"**🤖 ChatBot :** {chat['bot']}")
+            st.markdown(f"**ChatBot :** {chat['bot']}")
             st.markdown("---")
     
     # bouton pr effacer l'historique
     if st.session_state.historique:
-        if st.button("🗑️ Effacer la conversation"):
+        if st.button("Effacer la conversation"):
             st.session_state.historique = []
             st.rerun()
             
             
     # informations sur le projet
     st.markdown("---")
-    with st.expander("ℹ️ À propos de ce projet"):
+    with st.expander("À propos de ce projet"):
         st.markdown("""
         **Mini-Chatbot - Exercice 7.2(Bonus)**
         
