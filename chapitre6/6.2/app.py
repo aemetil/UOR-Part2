@@ -34,8 +34,8 @@ try:
             "Type": fields.get("type_d_etablissement"),
     })
 except Exception as e: 
-    st.error("❌ Échec de telechargement, rafraichir la page!")
-    if st.button("🔄 Rafraîchir les données"):
+    st.error("Échec de telechargement, rafraichir la page!")
+    if st.button("Rafraîchir les données"):
         st.rerun()
     st.stop()
 
